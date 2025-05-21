@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos Más Vendidos</title>
+  <style>
+    /* Fuente, fondo y formato general */
+    body {
+      font-family: initial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffdde1);
+      color: #333;
+    }
+
+    header {
+      background-color: #ffc0cb;
+      color: #7d4780;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    /* Navegación */
+    nav {
+      background-color: #7d4780;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      background-color: #7d4780;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #56105f;
+      transform: scale(1.05);
+    }
+
+    /* Contenedor principal */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(125, 71, 128, 0.2);
+    }
+
+    #top-products h2 {
+      text-align: center;
+      color: #7d4780;
+      margin-bottom: 30px;
+    }
+
+    .products-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .product {
+      background-color: #fff0f5;
+      border: 2px solid #ffc0cb;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(125, 71, 128, 0.2);
+    }
+
+    .product img {
+      width: 150px;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .product h3 {
+      color: #7d4780;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .product p {
+      color: #555;
+      font-size: 0.95em;
+      line-height: 1.4;
+    }
+
+    footer {
+      background-color: #fff;
+      color: #7d4780;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .product img {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Productos Más Vendidos</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="MiPagina.html">Hogar</a></li>
+      <li><a href="Catalogo.html">Catálogo</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section id="top-products">
+      <h2>Productos Destacados</h2>
+      <div class="products-list">
+
+        <!-- Producto 1 -->
+        <div class="product">
+          <img src="libroK.jpeg" alt="Libro de Fantasía" />
+          <h3>ALICIA</h3>
+          <p>Alice's Adventures in Wonderland narra la historia de Alicia, una niña que cae por una madriguera y llega a un mundo extraño lleno de personajes y situaciones absurdas.</p>
+          <p>$847.00</p>
+          <p><strong>Ventas: 1500</strong></p>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product">
+          <img src="libroH.jpeg" alt="La muerte de Arturo" />
+          <h3>LA MUERTE DE ARTURO I</h3>
+          <p>Relato del rey Arturo y sus caballeros, culminando con su muerte en batalla y su viaje a Avalon. Una leyenda eterna.</p>
+          <p>$443.00</p>
+          <p><strong>Ventas: 1200</strong></p>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product">
+          <img src="libroD.jpeg" alt="Todo este tiempo" />
+          <h3>TODO ESTE TIEMPO</h3>
+          <p>Amelia y Ethan, tras pérdidas dolorosas, se ayudan a sanar en esta emotiva historia</p>
+          <p>$249.00</p>
+            <p><strong>Ventas: 750</strong></p>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Books & More. <a href="Terminos.html">Terminos y Condiciones.</a></p>
+  </footer>
+
+</body>
+</html>

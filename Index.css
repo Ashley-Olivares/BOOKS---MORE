@@ -1,0 +1,137 @@
+body {
+font-family: initial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #ffc0cb;
+}
+
+/* HEADER */
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 50px;
+background-color: #ffdde1;
+}
+
+.logo img {
+width: 100px;
+}
+
+nav ul {
+list-style: none;
+display: flex;
+gap: 20px;
+}
+
+nav ul li {
+display: inline;
+}
+
+nav ul li a {
+text-decoration: none;
+color: #444;
+font-weight: bold;
+}
+
+.menu-icon {
+display: none;
+font-size: 24px;
+}
+
+/* HERO SECTION */
+.hero {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 50px;
+}
+
+.text {
+width: 50%;
+}
+
+.text h3 {
+font-size: 20px;
+text-transform: uppercase;
+color: #7d4780;
+}
+
+.text h1 {
+font-size: 100px;
+color: #4e1266;
+}
+
+.text .tasty {
+color: #7d4780;
+}
+
+.text p {
+font-size: 18px;
+color: #5a5a5a;
+max-width: 400px;
+}
+
+.buttons {
+margin-top: 20px;
+}
+
+.buy-btn, .info-btn {
+padding: 10px 20px;
+border: none;
+font-size: 16px;
+cursor: pointer;
+margin-right: 10px;
+}
+
+.buy-btn {
+background-color: #7d4780;
+color: white;
+border-radius: 5px;
+}
+
+.info-btn {
+background-color: transparent;
+border: 2px solid #7d4780;
+color: #7d4780;
+border-radius: 5px;
+}
+
+/* IMAGEN */
+.image img {
+width: 520px;
+border-bottom-left-radius: 1000%;
+}
+
+/* FOOTER */
+footer {
+text-align: center;
+background-color: #ffdde1;
+padding: 10px;
+font-size: 14px;
+color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+.hero {
+flex-direction: column;
+text-align: center;
+}
+
+.text {
+width: 100%;
+}
+
+.image img {
+width: 80%;
+}
+
+nav ul {
+display: none;
+}
+
+.menu-icon {
+display: block;
+}
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Books & More</title>
+
+  <style>
+    /* Fondo y fuente */
+    body {
+      font-family: initial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffdde1);
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #ffc0cb;
+      color: #7d4780;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 3em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    /* Menú de navegación */
+    nav {
+      background-color: #7d4780;
+      text-align: center;
+      padding: 10px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      background-color: #7d4780;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    nav ul li a:hover {
+      background-color: #56105f;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(125, 71, 128, 0.4);
+    }
+
+    /* Contenedor principal */
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 30px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0px 4px 20px rgba(125, 71, 128, 0.2);
+    }
+
+    section {
+      margin-bottom: 2em;
+    }
+
+    section h2 {
+      color: #7d4780;
+      border-bottom: 2px solid #ffc0cb;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+      font-size: 1.6em;
+    }
+
+    section p,
+    section ul {
+      line-height: 1.6;
+      color: #444;
+    }
+
+    ul li {
+      margin-bottom: 5px;
+    }
+
+    .contact-info {
+      background-color: #f8e8f0;
+      border-left: 4px solid #7d4780;
+      padding: 15px 20px;
+      border-radius: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #fff;
+      color: #7d4780;
+      text-align: center;
+      padding: 15px 0;
+      font-weight: bold;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BOOKS & MORE</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="MiPagina.html">Hogar</a></li>
+      <li><a href="Catalogo.html">Catálogo</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+
+    <section id="about">
+      <h2>Acerca de Nosotros</h2>
+      <p>
+        En <strong>Books & More</strong>, creemos que cada libro es una aventura esperando a ser descubierta.
+        No solo ofrecemos una cuidada selección de títulos en todos los géneros, desde novelas clásicas
+        hasta las últimas novedades, sino que también contamos con artículos literarios que harán tu experiencia
+        aún más especial, como separadores de libros, stickers y post-it.
+      </p>
+      <p>
+        Más que una tienda, somos una comunidad de lectores apasionados. Nos encanta organizar clubes de lectura y 
+        crear un ambiente acogedor donde puedas disfrutar de cada página. 
+      </p>
+    </section>
+
+    <section id="services">
+      <h2>Productos</h2>
+      <ul>
+        <li>Libros</li>
+        <li>Separadores</li>
+        <li>Post-it</li>
+        <li>Marca textos</li>
+      </ul>
+    </section>
+
+    <section id="location">
+      <h2>Ubicación</h2>
+      <p>Estamos ubicados en ------, con fácil acceso a transporte y una amplia oferta de productos.</p>
+      <p><strong>Dirección:</strong> Calle ----, Ciudad, País</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contacto</h2>
+      <p>Si tienes alguna pregunta o deseas obtener más información, no dudes en contactarnos.</p>
+      <div class="contact-info">
+        <p><strong>Teléfono:</strong> +52 661 203 4833</p>
+        <p><strong>Email:</strong> ashleydaniela.ob@gmail.com</p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Books & More. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

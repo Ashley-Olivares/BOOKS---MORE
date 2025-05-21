@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Separadores - Librería Online</title>
+  <link rel="stylesheet" href="Separadores.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="MiPagina.html">BOOKS & MORE</a>
+      </div>
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="Carrito.html" id="cartLink">Carrito (0)</a></li>
+        <li><a href="MasVendidos.html" id="cartLink">Mas Vendidos</a></li>
+        <li><a href="MasInformacion.html">Nosotros</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+        <li><a href="Catalogo.html">Libros</a></li>
+        <li><a href="Stickers.html">Stickers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <header>
+    <h1>Catálogo de Separadores</h1>
+    <input type="text" id="searchInput" placeholder="Buscar separadores..." />
+  </header>
+
+  <main>
+    <section id="catalog">
+      <div class="book">
+        <img src="separador1.jpeg" alt="Separador 1" />
+        <h3>Separador de Venti</h3>
+        <p><strong>$15.00</strong></p>
+        <button class="add-to-cart" data-product="Separador Floral" data-price="15.00">Agregar al carrito</button>
+      </div>
+
+      <div class="book">
+        <img src="separador2.jpeg" alt="Separador 2" />
+        <h3>Separador de Estrellas</h3>
+        <p><strong>$15.00</strong></p>
+        <button class="add-to-cart" data-product="Separador de Gato" data-price="15.00">Agregar al carrito</button>
+      </div>
+
+      <div class="book">
+        <img src="separador3.jpeg" alt="Separador 3" />
+        <h3>Separador de Fresas</h3>
+        <p><strong>$15.00</strong></p>
+        <button class="add-to-cart" data-product="Separador Astronauta" data-price="15.00">Agregar al carrito</button>
+      </div>
+
+      <div class="book">
+        <img src="separador4.jpeg" alt="Separador 4" />
+        <h3>Separador de Anime</h3>
+        <p><strong>$15.00</strong></p>
+        <button class="add-to-cart" data-product="Separador de Gato" data-price="15.00">Agregar al carrito</button>
+      </div>
+
+      <div class="book">
+        <img src="separador5.jpeg" alt="Separador 5" />
+        <h3>Separador de Anime</h3>
+        <p><strong>$15.00</strong></p>
+        <button class="add-to-cart" data-product="Separador de Gato" data-price="15.00">Agregar al carrito</button>
+      </div>
+
+      <div class="book">
+        <img src="separador6.jpeg" alt="Separador 6" />
+        <h3>Separador de Venti</h3>
+        <p><strong>$15.00</strong></p>
+        <button class="add-to-cart" data-product="Separador de Gato" data-price="15.00">Agregar al carrito</button>
+      </div>
+
+      <div class="book">
+        <img src="separador7.jpeg" alt="Separador 5" />
+        <h3>Separador de Estrellas </h3>
+        <p><strong>$15.00</strong></p>
+        <button class="add-to-cart" data-product="Separador de Gato" data-price="15.00">Agregar al carrito</button>
+      </div>
+
+      <div class="book">
+        <img src="separador8.jpeg" alt="Separador 5" />
+        <h3>Separador Floral </h3>
+        <p><strong>$15.00</strong></p>
+        <button class="add-to-cart" data-product="Separador de Gato" data-price="15.00">Agregar al carrito</button>
+      </div>
+
+      <div class="book">
+        <img src="separador11.jpeg" alt="Separador 5" />
+        <h3>Separador de Fresas </h3>
+        <p><strong>$15.00</strong></p>
+        <button class="add-to-cart" data-product="Separador de Gato" data-price="15.00">Agregar al carrito</button>
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    // Espera a que el DOM cargue completamente
+  document.addEventListener('DOMContentLoaded', function () {
+    const input = document.getElementById('searchInput');
+    const books = document.querySelectorAll('#catalog .book');
+
+    input.addEventListener('keyup', function () {
+      const filtro = input.value.toLowerCase();
+
+      books.forEach(function (book) {
+        const titulo = book.querySelector('h3').textContent.toLowerCase();
+        // Mostrar si coincide, ocultar si no
+        if (titulo.includes(filtro)) {
+          book.style.display = 'block';
+        } else {
+          book.style.display = 'none';
+        }
+      });
+    });
+  });
+
+
+        function searchBooks() {
+         const input = document.getElementById('searchInput').value.toLowerCase();
+         const books = document.querySelectorAll('#catalog .book');
+
+         books.forEach(book => {
+          const title = book.querySelector('h3').textContent.toLowerCase();
+          if (title.includes(input)) {
+            book.style.display = 'block';
+          } else {
+            book.style.display = 'none';
+          }
+        });
+       }
+
+      // Función para agregar productos al carrito
+      function addToCart(productName, productPrice) {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Agregar producto al carrito
+        cart.push({ name: productName, price: productPrice });
+
+        // Guardar carrito en localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Actualizar el contador del carrito en el encabezado
+        updateCartCount();
+      }
+
+       // Función para actualizar el contador de artículos en el carrito
+      function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        document.getElementById('cartLink').textContent = `Carrito (${cart.length})`;
+      }
+
+  // Espera a que el DOM cargue completamente
+  document.addEventListener('DOMContentLoaded',  () => {
+    const input = document.getElementById('searchInput');
+    const books = document.querySelectorAll('#catalog .book');
+
+    input.addEventListener('keyup',  () => {
+      const filtro = input.value.toLowerCase();
+      books.forEach(book  =>  {
+        const titulo = book.querySelector('h3').textContent.toLowerCase();
+       product.style.display = titulo.includes(filtro) ? 'block' : 'none';
+      });
+    });
+
+    // Agregar eventos a los botones de agregar al carrito
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', () => {
+        const productName = button.parentElement.querySelector('h3')?.textContent || 'Producto';
+        const productPrice = button.getAttribute('data-price') || '0.00';
+
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({ name: productName, price: productPrice });
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Mostrar alerta personalizada
+        alert(`"${productName}" aun no esta disponible.`);
+
+        updateCartCount();
+      });
+    });
+
+    
+    // Actualiza contador si ya hay cosas en el carrito
+    updateCartCount();
+
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartLink = document.querySelector('a[href="Carrito.html"]');
+      if (cartLink) {
+        cartLink.textContent = `Carrito (${cart.length})`;
+      }
+    }
+  });
+  </script>
+</body>
+</html>

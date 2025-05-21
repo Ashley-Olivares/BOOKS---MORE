@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito de Compras</title>
+
+  <style>
+    body {
+      font-family: initial, sans-serif;
+      background: linear-gradient(to bottom, #ffe4ec, #ffc0cb);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #7d4780;
+      padding: 1.5em;
+      color: white;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background-color: #;
+      padding: 10px 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #7d4780;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    nav ul li a:hover {
+      color: purple;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .cart-item h3 {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    .cart-item p {
+      margin: 5px 0 0;
+      color: #555;
+    }
+
+    .cart-item .price {
+      font-weight: bold;
+      color: #444;
+    }
+
+    .remove-btn {
+      background-color: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .remove-btn:hover {
+      background-color: #7d4780;
+    }
+
+    .cart-summary {
+      text-align: right;
+      margin-top: 20px;
+      font-size: 1.3em;
+      color: #333;
+    }
+
+    .checkout-btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      background-color: #7d4780;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 25px;
+    }
+
+    .checkout-btn:hover {
+      background-color: #4e1266;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Carrito de Compras</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="MiPagina.html">Hogar</a></li>
+    <li><a href="Catalogo.html">Libros</a></li>
+    <li><a href="Separadores.html">Separadores</a></li>
+    <li><a href="Stickers.html">Stikers</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div id="cartItems" class="cart-items">
+    <!-- Aquí se llenan los productos con JS -->
+  </div>
+
+  <div class="cart-summary">
+    Total: $<span id="totalAmount">0.00</span>
+  </div>
+<a href="Cuestionario.html">
+  <button class="checkout-btn">Proceder al Pago</button>
+</a>
+</div>
+
+<script>
+  function loadCart() {
+    const cartItemsContainer = document.getElementById("cartItems");
+    const totalAmount = document.getElementById("totalAmount");
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let total = 0;
+
+    cartItemsContainer.innerHTML = ""; // Limpia antes de mostrar
+
+    cart.forEach((item, index) => {
+      const itemDiv = document.createElement("div");
+      itemDiv.className = "cart-item";
+
+      itemDiv.innerHTML = `
+        <div>
+          <h3>${item.name || 'Producto sin nombre'}</h3>
+          <p class="price">$${parseFloat(item.price).toFixed(2)}</p>
+        </div>
+        <button class="remove-btn" onclick="removeFromCart(${index})">Eliminar</button>
+      `;
+
+      cartItemsContainer.appendChild(itemDiv);
+      total += parseFloat(item.price);
+    });
+
+    totalAmount.textContent = total.toFixed(2);
+  }
+
+  function removeFromCart(index) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart(); // Recarga la vista
+  }
+
+  // Carga inicial
+  loadCart();
+</script>
+
+</body>
+</html>

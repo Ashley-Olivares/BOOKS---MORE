@@ -1,0 +1,21 @@
+document.getElementById("search-bar").addEventListener("input", function () {
+    let filter = this.value.toLowerCase();
+    let products = document.querySelectorAll(".product");
+
+    products.forEach(function (product) {
+        let nameElement = product.querySelector("h4");
+        let name = nameElement.textContent;
+        let lowerName = name.toLowerCase();
+
+        if (lowerName.includes(filter)) {
+            product.style.display = "block";
+
+            // Resaltar texto coincidente
+            let regex = new RegExp((${filter}), "gi");
+            nameElement.innerHTML = name.replace(regex, <span class="highlight">$1</span>);
+        } else {
+            product.style.display = "none";
+            nameElement.innerHTML = name; // Restaurar el nombre original si se oculta
+        }
+    });
+});

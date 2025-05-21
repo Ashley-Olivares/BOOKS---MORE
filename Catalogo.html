@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librería Online</title>
+    <link rel="stylesheet" href="catalogo.css" href="Catalogo.JavaScript">
+  </head>
+  <body>
+
+    <body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="MiPagina.html">BOOKS & MORE</a>
+      </div>
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="Carrito.html" id="cartLink">Carrito (0)</a></li>
+        <li><a href="MasVendidos.html" id="cartLink">Mas Vendidos</a></li>
+        <li><a href="MasInformacion.html">Nosotros</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+        <li><a href="Separadores.html">Separadores</a></li>
+        <li><a href="Stickers.html">Stickers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+
+
+    <header>
+      <h1>Catalogo de Libros</h1>
+
+      <input type="text" id="searchInput" placeholder="Buscar libros por título..." />
+
+
+    </header>
+    <style>
+      body {
+        background: linear-gradient(to bottom, #ffdde1, #7d4780);
+      }
+    </style>
+
+    <main>
+      <section id="catalog">
+        <div class="book">
+          <a href="#libro1">
+            <img src="libroA.jpeg">
+            <h3>BAJO LA MISMA ESTRELLA</h3>
+          </a>
+          <p>Jhon Green</p>
+          <p><strong>$249.90</strong></p>
+          <button class="add-to-cart" data-price="249.90">Agregar al carrito</button>
+        </div>
+        <div class="book">
+          <a href="#libro2">
+            <img src="libroB.jpeg">
+            <h3>AL FINAL MUEREN LOS DOS</h3>
+          </a>
+          <p>Adam Silvera</p>
+          <p><strong>$233.75</strong></p>
+          <button class="add-to-cart" data-price="233.75">Agregar al carrito</button>
+        </div>
+        <div class="book">
+          <a href="#libro3">
+            <img src="libroC.jpeg">
+            <h3>ARISTOTELES Y DANTE DESCUBREN LOS SECRETOS DEL UNIVERSO</h3>
+          </a>
+          <p>Benjamin Alire Saenz</p>
+          <p><strong>$348.00</strong></p>
+          <button class="add-to-cart"  data-price="348.00">Agregar al carrito</button>
+        </div>
+        <div class="book">
+          <a href="#libro4">
+            <img src="libroD.jpeg">
+            <h3>TODO ESTE TIEMPO</h3>
+          </a>
+          <p>Mikki Daughtry y Rachael Lippincott</p>
+          <p><strong>$249.00</strong></p>
+          <button class="add-to-cart" data-price="249.00">Agregar al carrito</button>
+        </div>
+        <div class="book">
+          <a href="#libro5">
+            <img src="libroE.jpeg">
+            <h3>ROJO, BLANCO Y SANGRE AZUL</h3>
+          </a>
+          <p>Casey McQuiston</p>
+          <p><strong>$351.55</strong></p>
+          <button class="add-to-cart"  data-price="351.55">Agregar al carrito</button>
+        </div>
+
+        <div class="book">
+          <a href="#libro6">
+            <img src="libroF.jpeg">
+            <h3>LA CASA DEL MAR MAS AZUL</h3>
+          </a>
+          <p>Margarita Engle</p>
+          <p><strong>$549.00</strong></p>
+          <button class="add-to-cart"  data-price="549.00">Agregar al carrito</button>
+        </div>
+
+        <div class="book">
+          <a href="#libro7">
+            <img src="libroG.jpeg">
+            <h3>EL CHICO DE LA PIEL DE CERDO</h3>
+          </a>
+          <p>Santiago Roncagliolo</p>
+          <p><strong>$426.00</strong></p>
+          <button class="add-to-cart"  data-price="426.00">Agregar al carrito</button>
+        </div>
+
+        <div class="book">
+          <a href="#libro8">
+            <img src="libroH.jpeg">
+            <h3>LA MUERTE DE ARTURO I</h3>
+          </a>
+          <p>Sir Thomas Malory</p>
+          <p><strong>$443.00</strong></p>
+          <button class="add-to-cart"  data-price="443.00">Agregar al carrito</button>
+        </div>
+
+        <div class="book">
+          <a href="#libro9">
+            <img src="libroI.jpeg">
+            <h3>OTRA GRAN OBRA MAESTRA DEL CINE</h3>
+          </a>
+          <p>Tom Hanks</p>
+          <p><strong>$489.00</strong></p>
+          <button class="add-to-cart"  data-price="489.00">Agregar al carrito</button>
+        </div>
+
+        <div class="book">
+          <a href="#libro10">
+            <img src="libroJ.jpeg">
+            <h3>ROMEO Y JULIETA</h3>
+          </a>
+          <p>William Shakespeare</p>
+          <p><strong>$292.00</strong></p>
+          <button class="add-to-cart"  data-price="292.00">Agregar al carrito</button>
+        </div>
+
+        <div class="book">
+          <a href="#libro11">
+            <img src="libroK.jpeg">
+            <h3>ALICIA</h3>
+          </a>
+          <p> Lewis Carroll</p>
+          <p><strong>$847.00</strong></p>
+          <button class="add-to-cart" data-price="847.00">Agregar al carrito</button>
+        </div>
+
+        <div class="book">
+          <a href="#libro12">
+            <img src="libroL.jpeg">
+            <h3>GRANDES EZPERANZAS</h3>
+          </a>
+          <p>Charles Dickens</p>
+          <p><strong>$443.00</strong></p>
+          <button class="add-to-cart" data-price="443.00">Agregar al carrito</button>
+        </div>
+      </section>
+
+      <script>
+
+  // Espera a que el DOM cargue completamente
+  document.addEventListener('DOMContentLoaded', function () {
+    const input = document.getElementById('searchInput');
+    const books = document.querySelectorAll('#catalog .book');
+
+    input.addEventListener('keyup', function () {
+      const filtro = input.value.toLowerCase();
+
+      books.forEach(function (book) {
+        const titulo = book.querySelector('h3').textContent.toLowerCase();
+        // Mostrar si coincide, ocultar si no
+        if (titulo.includes(filtro)) {
+          book.style.display = 'block';
+        } else {
+          book.style.display = 'none';
+        }
+      });
+    });
+  });
+
+
+        function searchBooks() {
+         const input = document.getElementById('searchInput').value.toLowerCase();
+         const books = document.querySelectorAll('#catalog .book');
+
+         books.forEach(book => {
+          const title = book.querySelector('h3').textContent.toLowerCase();
+          if (title.includes(input)) {
+            book.style.display = 'block';
+          } else {
+            book.style.display = 'none';
+          }
+        });
+       }
+
+      // Función para agregar productos al carrito
+      function addToCart(productName, productPrice) {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Agregar producto al carrito
+        cart.push({ name: productName, price: productPrice });
+
+        // Guardar carrito en localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Actualizar el contador del carrito en el encabezado
+        updateCartCount();
+      }
+
+       // Función para actualizar el contador de artículos en el carrito
+      function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        document.getElementById('cartLink').textContent = `Carrito (${cart.length})`;
+      }
+
+  // Espera a que el DOM cargue completamente
+  document.addEventListener('DOMContentLoaded',  () => {
+    const input = document.getElementById('searchInput');
+    const books = document.querySelectorAll('#catalog .book');
+
+    input.addEventListener('keyup',  () => {
+      const filtro = input.value.toLowerCase();
+      books.forEach(book  =>  {
+        const titulo = book.querySelector('h3').textContent.toLowerCase();
+       product.style.display = titulo.includes(filtro) ? 'block' : 'none';
+      });
+    });
+
+    // Agregar eventos a los botones de agregar al carrito
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', () => {
+        const productName = button.parentElement.querySelector('h3')?.textContent || 'Producto';
+        const productPrice = button.getAttribute('data-price') || '0.00';
+
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({ name: productName, price: productPrice });
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Mostrar alerta personalizada
+        alert(`"${productName}" aun no esta disponible.`);
+
+        updateCartCount();
+      });
+    });
+
+    // Actualiza contador si ya hay cosas en el carrito
+    updateCartCount();
+
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartLink = document.querySelector('a[href="Carrito.html"]');
+      if (cartLink) {
+        cartLink.textContent = `Carrito (${cart.length})`;
+      }
+    }
+  });
+
+    </script>
+
+      <section id="book-details">
+        <div id="libro1" class="book-info">
+          <h2>BAJO LA MISMA ESTRELLA</h2>
+          <p><strong>Autor:</strong> Jhon Green</p>
+          <p><strong>Género:</strong> Ficción Contemporanea</p>
+          <p><strong>Precio:</strong> $249.90</p>
+          <p>Descripción: Bajo la misma estrella (The Fault in Our Stars) es una novela escrita por el autor estadounidense John Green, publicada en 2012. La historia narra la vida de dos adolescentes, Hazel Grace Lancaster y Augustus Waters, quienes se conocen en un grupo de apoyo para personas con cáncer.</p>
+          <img src="libroA.jpeg" width="200px">
+          <a href="Catalogo.html">Volver al catálogo</a>
+        </div>
+
+        <div id="libro2" class="book-info">
+          <h2>AL FINAL MUEREN LOS DOS</h2>
+          <p><strong>Autor:</strong> Adam Silvera</p>
+          <p><strong>Género:</strong> Drama, Ficción Contemporánea</p>
+          <p><strong>Precio:</strong> $233.75</p>
+          <p>Descripción: Al final mueren los dos (They Both Die at the End) es una novela escrita por Adam Silvera, publicada en 2017. Es una historia emotiva y reflexiva que trata temas como la vida, la muerte, el destino y las relaciones humanas.</p>
+          <img src="libroB.jpeg" width="200px">
+          <a href="#">Volver al catálogo</a>
+        </div>
+
+        <div id="libro3" class="book-info">
+          <h2>ARISTOTELES Y DANTE DESCUBREN LOS SECRETOS DEL UNIVERSO</h2>
+          <p><strong>Autor:</strong> Benjamin Alire Saenz</p>
+          <p><strong>Género:</strong> Drama, Romance, Autodescubrimiento y Aceptación.</p>
+          <p><strong>Precio:</strong> $348.00</p>
+          <p>Descripción: Aristóteles y Dante descubren los secretos del universo es una novela de Benjamin Alire Sáenz que sigue la historia de dos adolescentes, Aristóteles "Ari" Mendoza y Dante Quintana, quienes se embarcan en un viaje de autodescubrimiento, amistad y amor en la década de 1980 en El Paso, Texas.</p>
+          <img src="libroC.jpeg" width="200px">
+          <a href="#">Volver al catálogo</a>
+        </div>
+
+        <div id="libro4" class="book-info">
+          <h2>TODO ESTE TIEMPO</h2>
+          <p><strong>Autor:</strong> Mikki Daughtry</p>
+          <p><strong>Género:</strong> Drama Contemporáneo, Romance</p>
+          <p><strong>Precio:</strong> $249.00</p>
+          <p>Descripción: Todo este tiempo (All This Time) es una novela escrita por Mikki Daughtry y Rachael Lippincott, publicada en 2020. Es una historia emotiva que mezcla temas de amor, pérdida, superación personal y las dificultades emocionales que enfrentan los jóvenes al lidiar con la muerte de un ser querido.</p>
+          <img src="libroD.jpeg" width="200px">
+          <a href="#">Volver al catálogo</a>
+        </div>
+
+        <div id="libro5" class="book-info">
+          <h2>ROJO, BLANCO Y SANGRE AZUL</h2>
+          <p><strong>Autor:</strong> Casey McQuiston</p>
+          <p><strong>Género:</strong> Romance, Comedia romántica, Ficción contemporánea y política.</p>
+          <p><strong>Precio:</strong> $351.55</p>
+          <p>Descripción: Rojo, blanco y sangre azul (Red, White & Royal Blue) es una novela escrita por Casey McQuiston y publicada en 2019. Es una historia de romance que mezcla comedia, política y drama, centrada en una relación YRealismo lírico</p>
+          <img src="libroE.jpeg" width="200px">
+          <a href="#">Volver al catálogo</a>
+        </div>
+
+        <div id="libro6" class="book-info">
+          <h2>LA CASA DEL MAR MAS AZUL</h2>
+          <p><strong>Autor:</strong> Margarita Engle</p>
+          <p><strong>Género:</strong> Ficción juvenil, Ficción contemporánea y Realismo lírico.</p>
+          <p><strong>Precio:</strong> $549.00</p>
+          <p>Descripción: La casa del mar más azul (The House of the Blue Sea) es una novela escrita por Margarita Engle, publicada en 2021. Es una obra que pertenece al género juvenil y se caracteriza por su estilo poético y su profunda exploración de las relaciones familiares, la identidad, y la conexión con la naturaleza. La historia está situada en Cuba, un entorno que no solo marca la trama, sino también las emociones y la vida de los personajes.</p>
+          <img src="libroF.jpeg" width="200px">
+          <a href="#">Volver al catálogo</a>
+        </div>
+
+        <div id="libro7" class="book-info">
+          <h2>EL CHICO DE LA PIEL DE CERDO</h2>
+          <p><strong>Autor:</strong> Santiago Roncagliolo</p>
+          <p><strong>Género:</strong> Ficción Contemporánea, Drama y Realismo Social. </p>
+          <p><strong>Precio:</strong> $426.00</p>
+          <p>Descripción: El chico de la piel de cerdo (The Boy with the Pigskin) es una novela escrita por Santiago Roncagliolo, un autor peruano conocido por su estilo único de contar historias, combinando humor negro y un enfoque profundo de temas complejos. Publicada en 2005, esta novela presenta una visión cruda y poética de la vida de un joven en una situación límite, marcada por el aislamiento y la brutalidad del entorno en el que vive.</p>
+          <img src="libroG.jpeg" width="200px">
+          <a href="#">Volver al catálogo</a>
+        </div>
+
+        <div id="libro8" class="book-info">
+          <h2>LA MUERTE DE ARTURO I</h2>
+          <p><strong>Autor:</strong> Sir Thomas Malory</p>
+          <p><strong>Género:</strong> Romance caballeresco, mitología </p>
+          <p><strong>Precio:</strong> $426.00</p>
+          <p>Descripción: "La Muerte de Arturo I" es una obra literaria que forma parte de las leyendas artúricas, un conjunto de relatos que narran las aventuras del rey Arturo y sus caballeros de la mesa redonda. Sin embargo, parece que hay cierta confusión con el título. La obra que más se asocia con la muerte de Arturo es "La Muerte de Arturo" (en inglés "Le Morte d'Arthur"), escrita por Sir Thomas Malory en 1485. Es una de las versiones más conocidas de las leyendas artúricas y, aunque no tiene una "parte I", está repleta de relatos sobre la vida y el destino trágico del rey Arturo.</p>
+          <img src="libroH.jpeg" width="200px">
+          <a href="#">Volver al catálogo</a>
+        </div>
+
+        <div id="libro9" class="book-info">
+          <h2>OTRA GRAN OBRA MAESTRA DEL CINE</h2>
+          <p><strong>Autor:</strong> Tom Hanks</p>
+          <p><strong>Género:</strong>  Crítica Cinematográfica.</p>
+          <p><strong>Precio:</strong> $489.00</p>
+          <p>Descripción: "Otra gran obra maestra del cine" (Another Great Masterpiece of Cinema), un libro escrito por Tom Hanks. Este autor es reconocido por su trabajo en la literatura, además de su enfoque crítico en el cine y la cultura. En este libro, Piglia se adentra en el análisis y reflexión sobre el cine, reflexionando sobre diversas películas y el impacto cultural que tienen.</p>
+          <img src="libroI.jpeg" width="200px">
+          <a href="#">Volver al catálogo</a>
+        </div>
+
+        <div id="libro10" class="book-info">
+          <h2>ROMEO Y JULIETA</h2>
+          <p><strong>Autor:</strong> William Shakespeare</p>
+          <p><strong>Género:</strong>  Tragedia Romántica</p>
+          <p><strong>Precio:</strong> $292.00</p>
+          <p>Descripción: Romeo y Julieta (Romeo and Juliet) es una de las obras más famosas de William Shakespeare, escrita entre 1591 y 1595. Esta tragedia romántica ha sido interpretada y adaptada de múltiples formas a lo largo de los siglos, y sigue siendo una de las historias de amor más icónicas de la literatura universal.</p>
+          <img src="libroJ.jpeg" width="200px">
+          <a href="#">Volver al catálogo</a>
+        </div>
+
+        <div id="libro11" class="book-info">
+          <h2>ALICIA</h2>
+          <p><strong>Autor:</strong> Lewis Carroll</p>
+          <p><strong>Género:</strong> Novela Fantástica. </p>
+          <p><strong>Precio:</strong> $847.00</p>
+          <p>Descripción: "Alicia en el País de las Maravillas" ("Alice's Adventures in Wonderland") es una novela escrita por Lewis Carroll (seudónimo de Charles Lutwidge Dodgson) publicada por primera vez en 1865. Es una de las obras más conocidas y queridas de la literatura infantil, famosa por su lógica absurda y sus personajes excéntricos.</p>
+          <img src="libroK.jpeg" width="200px">
+          <a href="#">Volver al catálogo</a>
+        </div>
+
+        <div id="libro12" class="book-info">
+          <h2>GRANDES ESPERANZAS</h2>
+          <p><strong>Autor:</strong> Charles Dickens</p>
+          <p><strong>Género:</strong>  ovela de Formación, Novela de Aventuras, y Crítica Social.</p>
+          <p><strong>Precio:</strong> $443.00</p>
+          <p>Descripción: "Grandes esperanzas" ("Great Expectations") es una de las novelas más conocidas de Charles Dickens, publicada por primera vez en forma de serie entre 1860 y 1861. Es una obra de crecimiento (bildungsroman) que combina elementos de la novela de aventuras, el romance y la crítica social. En ella, Dickens aborda temas como la pobreza, la ambición, la redención y la clase social, mientras narra la vida de su protagonista, Philip Pirrip, conocido como Pip.</p>
+          <img src="libroL.jpeg" width="200px">
+          <a href="#">Volver al catálogo</a>
+        </div>
+</section>
+</main>
+</body>
+</html>

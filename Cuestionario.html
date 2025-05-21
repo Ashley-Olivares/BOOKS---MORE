@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <style>
+        body {
+            font-family: initial, sans-serif;
+            background-color: #ffc0cb;
+            padding: 30px;
+        }
+        .formulario {
+            max-width: 500px;
+            margin: auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+  background-color: #ffc0cb;
+  color: #7d4780;
+  text-align: center;
+  padding: 20px 0px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  font-size: 2.0em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+a {
+  background-color: #7d4780;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+a {
+  background-color: #7d4780;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+a:hover {
+  background-color: #56105f;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(125, 71, 128, 0.4);
+}
+
+        
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #7d4780;
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #7d4780;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #703073;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <center><a href="MiPagina.html">BOOKS & MORE</a>
+    </header>
+
+    <div class="formulario">
+        <h3>Formulario de compra</h3>
+        <form onsubmit="enviarDatos(event)">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="direccion">Dirección:</label>
+            <textarea id="direccion" name="direccion" rows="3" required></textarea>
+
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" required>
+
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="pais" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        function enviarDatos(event) {
+            event.preventDefault();
+            alert("¡Datos enviados correctamente!");
+            // Aquí podrías enviar los datos a un servidor o hacer otra acción
+        }
+    </script>
+
+</body>
+</html>
